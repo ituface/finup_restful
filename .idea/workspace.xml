@@ -1,7 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f806d0aa-46ba-44a4-b49e-d919cad7a998" name="Default Changelist" comment="" />
+    <list default="true" id="f806d0aa-46ba-44a4-b49e-d919cad7a998" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finup/controller/SelectAllMessage.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/finup/controller/SelectAllMessage.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finup/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/finup/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/cmd/fiximports/testdata/src/old.com/bad/bad.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/go/loader/testdata/badpkgdecl.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/analyzer/bad_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/anon/anon.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/bad/bad0.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/bad/bad1.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/badstmt/badstmt.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/bar/bar.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/basiclit/basiclit.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/baz/baz.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/builtins/builtins.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/cast/cast.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/channel/channel.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/comments/comments.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/complit/complit.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/constant/constant.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/deepcomplete/deep_complete.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/errors/errors.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/foo/foo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/format/bad_format.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/format/bad_format.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/format/good_format.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/format/good_format.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/format/newline_format.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/format/newline_format.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/format/one_line.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/format/one_line.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/func_rank/func_rank.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/funcvalue/func_value.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/a/a.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/a/a.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/a/d.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/a/d.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/a/f.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/a/f.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/a/random.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/a/random.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/b/b.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/b/b.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/b/c.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/b/c.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/b/c.go.saved" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/b/e.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/b/e.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/broken/unclosedIf.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/godef/broken/unclosedIf.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/good/good0.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/good/good1.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/highlights/highlights.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/importedcomplit/imported_complit.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/imports/good_imports.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/imports/good_imports.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/imports/needs_imports.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/imports/needs_imports.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/index/index.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/interfacerank/interface_rank.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/links/links.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/nested_complit/nested_complit.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/nodisk/empty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/nodisk/newdisk_exists.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/nodisk/nodisk.overlay.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/noparse/noparse.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/noparse_format/noparse_format.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/noparse_format/noparse_format.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rank/assign_rank.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rank/binexpr_rank.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rank/convert_rank.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rank/switch_rank.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rank/type_assert_rank.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rank/type_switch_rank.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/references/refs.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/a/random.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/a/random.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/b/b.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/b/b.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/bad/bad.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/bad/bad.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/testy/testy.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/testy/testy.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/testy/testy_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/rename/testy/testy_test.go.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/selector/selector.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/signature/signature.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/snippets/snippets.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/symbols/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/testy/testy.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/testy/testy_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/typeassert/type_assert.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/types/types.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/unresolved/unresolved.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/unsafe/unsafe.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,12 +109,36 @@
     <favorites_list name="finup_restful" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/finup/router/router.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="210">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#14#130#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/docs/docs.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-24165">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding>
+                <element signature="e#162#261#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -25,8 +146,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/finup/controller/SelectAllMessage.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="265">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="e#20#105#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,19 +165,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../gin_ituface/src/finup/controller/SelectAllMessage.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+            <state relative-caret-position="334">
+              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -61,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+            <state relative-caret-position="-122">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -70,6 +185,9 @@
     </leaf>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="urls">
       <list>
@@ -80,11 +198,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main.go" />
-        <option value="$PROJECT_DIR$/src/finup/router/router.go" />
-        <option value="$PROJECT_DIR$/src/finup/controller/SelectAllMessage.go" />
         <option value="$PROJECT_DIR$/src/finup/database/mysql.go" />
         <option value="$PROJECT_DIR$/../gin_ituface/src/finup/controller/SelectAllMessage.go" />
+        <option value="$PROJECT_DIR$/src/golang.org/x/tools/cmd/fiximports/testdata/src/old.com/bad/bad.go" />
+        <option value="$PROJECT_DIR$/src/golang.org/x/tools/go/loader/testdata/badpkgdecl.go" />
+        <option value="$PROJECT_DIR$/src/finup/router/router.go" />
+        <option value="$PROJECT_DIR$/src/finup/controller/SelectAllMessage.go" />
+        <option value="$PROJECT_DIR$/src/docs/docs.go" />
+        <option value="$PROJECT_DIR$/src/main.go" />
       </list>
     </option>
   </component>
@@ -94,6 +215,7 @@
     <option name="width" value="1400" />
     <option name="height" value="777" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -110,17 +232,38 @@
             <path>
               <item name="finup_restful" type="b2602c69:ProjectViewProjectNode" />
               <item name="finup_restful" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finup_restful" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finup_restful" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finup_restful" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finup_restful" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="finup_restful" type="b2602c69:ProjectViewProjectNode" />
               <item name="finup_restful" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="finup_restful" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="finup_restful" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.12.7" type="20ee2d1f:SyntheticLibraryElementNode" />
+            </path>
+            <path>
+              <item name="finup_restful" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.12.7" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -129,13 +272,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pkg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -148,9 +292,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/pkg" />
       <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -193,48 +337,32 @@
     <frame x="40" y="35" width="1400" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" sideWeight="0.50121653" side_tool="true" weight="0.2496318" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49878347" visible="true" weight="0.2496318" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49878347" visible="true" weight="0.29086894" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.329927" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.50121653" side_tool="true" weight="0.2496318" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42335767" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.86377025" visible="true" weight="0.42335767" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.904271" weight="0.329927" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.13622975" side_tool="true" visible="true" weight="0.42335767" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/go_build_main_go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/finup/router/router.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/go_build_main_go" />
     <entry file="file:///usr/local/go/src/runtime/panic.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -242,17 +370,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/finup/controller/SelectAllMessage.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/swaggo/swag/cmd/swag/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state>
+          <folding>
+            <element signature="e#14#144#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/docs/swagger.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/docs/swagger.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+        <state relative-caret-position="-122">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/golang.org/x/tools/cmd/fiximports/testdata/src/old.com/bad/bad.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/golang.org/x/tools/go/loader/testdata/badpkgdecl.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/badstmt/badstmt.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#17#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/golang.org/x/tools/internal/lsp/testdata/channel/channel.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gin_ituface/src/finup/controller/SelectAllMessage.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/finup/controller/SelectAllMessage.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#20#105#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -263,10 +442,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../gin_ituface/src/finup/controller/SelectAllMessage.go">
+    <entry file="file://$PROJECT_DIR$/src/docs/docs.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        <state relative-caret-position="-24165">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="e#162#261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#14#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/finup/router/router.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
     </entry>

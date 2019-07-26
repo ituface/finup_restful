@@ -70,7 +70,15 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 	return
 
 }
-
+// Name will print hello name
+// @Summary Print
+// @Accept json
+// @Tags Name
+// @Security Bearer
+// @Produce  json
+// @Param name path string true "name"
+// @Resource Name
+// @Router /hello/{name} [get]
 func SelectAllMessage(c *gin.Context) {
    var m Message
    var messages,err=m.getAll("10002566")
