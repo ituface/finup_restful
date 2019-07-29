@@ -4,6 +4,7 @@ import (
 	db "finup/database"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"io/ioutil"
 	"log"
 	"net/http"
 )
@@ -52,18 +53,18 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 	left join finup_lend.lend_request_substatus lrs on fl.id=lrs.lend_request_id
 	WHERE lr.id=%s`
 
-    sqlStr=fmt.Sprintf(sqlStr,str)
-	rows,err:= db.My.Query(sqlStr)
-	if err!=nil{
-		log.Fatalln("query is error",err)
+	sqlStr = fmt.Sprintf(sqlStr, str)
+	rows, err := db.My.Query(sqlStr)
+	if err != nil {
+		log.Fatalln("query is error", err)
 	}
 
 	for rows.Next() {
 		var message Message
-		rows.Scan(&message.AppCustomerId,&message.AppRequestId,&message.LendRequestId,&message.AppCustomerName,&message.AppMobile,
-			&message.AppIdNo,&message.AppLogin,&message.SalesNo,&message.AppStateType,&message.LendStatus,&message.LendCustomerId,
-			&message.LendCustomerName,&message.LendCustomerIdNo,message.LendMinStatus)
-		messages=append(messages, message)
+		rows.Scan(&message.AppCustomerId, &message.AppRequestId, &message.LendRequestId, &message.AppCustomerName, &message.AppMobile,
+			&message.AppIdNo, &message.AppLogin, &message.SalesNo, &message.AppStateType, &message.LendStatus, &message.LendCustomerId,
+			&message.LendCustomerName, &message.LendCustomerIdNo, message.LendMinStatus)
+		messages = append(messages, message)
 
 	}
 
@@ -72,14 +73,50 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 }
 
 func SelectAllMessage(c *gin.Context) {
-   var m Message
-   var messages,err=m.getAll("10002566")
-   if err!=nil{
-   	log.Fatalln("selectAllMessage is error")
-   }
-   c.JSON(http.StatusOK,gin.H{
-   	"code":http.StatusOK,
-   	"messages":messages,
-   })
+	var m Message
+	var messages, err = m.getAll("10002566")
+	if err != nil {
+		log.Fatalln("selectAllMessage is error")
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"code":     http.StatusOK,
+		"messages": messages,
+	})
+
+}
+
+func Posttest(c *gin.Context) {
+
+	num := c.PostForm("num")
+	data, _ := ioutil.ReadAll(c.Request.Body)
+	fmt.Printf("ctx.Request.body: %v", string(data))
+
+	fmt.Println(num)
+	nick := c.DefaultPostForm("nick", "anonymous") // 此方法可以设置默认值
+	c.JSON(http.StatusOK, gin.H{
+		"num":  num + "哈哈哈",
+		"nick": nick,
+		"code": http.StatusOK,
+	})
+
+}
+
+func HeadersAuth() gin.HandlerFunc {
+
+	return func(context *gin.Context) {
+       //权限验证 通过headers
+		Auth := context.Request.Header.Get("Auth")
+
+		if Auth=="YLS" {
+			context.Next()
+			return
+
+		}
+		context.JSON(http.StatusUnauthorized, gin.H{
+			"error": "Unauthorized",
+		})
+		context.Abort()
+
+	}
 
 }
