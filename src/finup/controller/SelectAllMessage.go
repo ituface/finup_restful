@@ -11,9 +11,12 @@ import (
 )
 
 const key = "787890096565454554541122"
+const _address="http://10.10.180.206:8090"
+const  _Decrpyt = "/getDecrpyt?array="  //解密地址
 
 type Message struct {
 	AppCustomerId    int
+	ProductName      string
 	AppRequestId     int
 	LendRequestId    int
 	AppCustomerName  string
@@ -34,6 +37,7 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 	sqlStr := `
 	SELECT
 	lc.id AS app_customer_id ,
+        alld.product_name,
 	lr.id AS app_request_id ,
 	fl.id AS lend_id ,
 	lc.customer_name as app_customer_name,
@@ -51,6 +55,7 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 	FROM
 	lend_app.app_customer lc
 	LEFT JOIN lend_app.app_lend_request lr ON lc.id = lr.app_customer_id
+        Left join lend_app.app_lend_loan_demand alld on lr.id=alld.app_lend_request_id
 	LEFT JOIN finup_lend.lend_request fl ON lr.id = fl.app_lend_request_id
 	LEFT JOIN finup_lend.lend_customer fc ON fl.lend_customer_id = fc.id
 	left join finup_lend.lend_request_substatus lrs on fl.id=lrs.lend_request_id
@@ -64,9 +69,18 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 
 	for rows.Next() {
 		var message Message
-		rows.Scan(&message.AppCustomerId, &message.AppRequestId, &message.LendRequestId, &message.AppCustomerName, &message.AppMobile,
+		rows.Scan(&message.AppCustomerId, &message.ProductName, &message.AppRequestId, &message.LendRequestId, &message.AppCustomerName, &message.AppMobile,
 			&message.AppIdNo, &message.AppLogin, &message.SalesNo, &message.AppStateType, &message.LendStatus, &message.LendCustomerId,
 			&message.LendCustomerName, &message.LendCustomerIdNo, message.LendMinStatus)
+        if message.AppMobile!=""{
+        	message.AppMobile,_=httpGet(_address+_Decrpyt+message.AppMobile)
+		}
+		if message.AppIdNo!=""{
+			message.AppIdNo,_=httpGet(_address+_Decrpyt+message.AppIdNo)
+		}
+		if message.LendCustomerIdNo!=""{
+			message.LendCustomerIdNo,_=httpGet(_address+_Decrpyt+message.LendCustomerIdNo)
+		}
 		messages = append(messages, message)
 
 	}
@@ -76,8 +90,10 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 }
 
 func SelectAllMessage(c *gin.Context) {
+
+	id := c.DefaultQuery("AppRequestId", "1")
 	var m Message
-	var messages, err = m.getAll("10002566")
+	var messages, err = m.getAll(id)
 	if err != nil {
 		log.Fatalln("selectAllMessage is error")
 	}
@@ -126,7 +142,7 @@ func HeadersAuth() gin.HandlerFunc {
 		urls := fmt.Sprintf("%s", url)
 
 		if Auth == "YLS" {
-            //为获取token接口
+			//为获取token接口
 			if urls != "/getToken" {
 				//异常处理
 				defer func() { // 必须要先声明defer，否则不能捕获到panic异常
