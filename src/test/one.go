@@ -1,19 +1,21 @@
+
 package main
 
 import "fmt"
-func sum(s [] int , c chan int)  {
-	sum := 0
-    for _ , v:=range s{
-    	sum+=v
-	}
-    c<-sum
+
+func main(){
+	defer func(){ // 必须要先声明defer，否则不能捕获到panic异常
+		fmt.Println("c")
+		if err:=recover();err!=nil{
+			fmt.Println(err) // 这里的err其实就是panic传入的内容，55
+		}
+		fmt.Println("d")
+	}()
+	fss()
 }
-func main() {
-	s:=[] int{1,2,3,4,5,6}
-	c:=make(chan int)
-	go sum(s[:len(s)/2],c)
-	fmt.Println(s[:len(s)/2])
-	go sum(s[len(s)/2:],c)
-	x,y:=<-c,<-c
-	fmt.Println(x,y,x+y)
+
+func fss(){
+	fmt.Println("a")
+	fmt.Println("b")
+	fmt.Println("f")
 }

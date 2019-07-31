@@ -12,6 +12,7 @@ func InitRouter() *gin.Engine  {
 
 	router.GET("/messages",SelectAllMessage)
 	router.POST("/posttest",Posttest)
+	router.POST("/getToken",GetToken)
 	return router
 }
 

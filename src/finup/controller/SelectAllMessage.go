@@ -7,7 +7,10 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strconv"
 )
+
+const key = "787890096565454554541122"
 
 type Message struct {
 	AppCustomerId    int
@@ -101,17 +104,67 @@ func Posttest(c *gin.Context) {
 
 }
 
+func GetToken(c *gin.Context) {
+	mobile := c.PostForm("mobile")
+	fmt.Println(mobile)
+	AesDecrypt_mobile := AesEncrypt(mobile, key)
+	c.JSON(http.StatusOK, gin.H{
+		"code":  http.StatusOK,
+		"token": AesDecrypt_mobile,
+	})
+}
+
 func HeadersAuth() gin.HandlerFunc {
 
 	return func(context *gin.Context) {
-       //权限验证 通过headers
-		Auth := context.Request.Header.Get("Auth")
+		//a:=AesEncrypt
+		//权限验证 通过headers
 
-		if Auth=="YLS" {
+		Auth := context.Request.Header.Get("Auth")
+		url := context.Request.URL
+
+		urls := fmt.Sprintf("%s", url)
+
+		if Auth == "YLS" {
+            //为获取token接口
+			if urls != "/getToken" {
+				//异常处理
+				defer func() { // 必须要先声明defer，否则不能捕获到panic异常
+					if err := recover(); err != nil {
+
+						fmt.Println("有异常产生") // 这里的err其实就是panic传入的内容，55
+						context.JSON(http.StatusUnauthorized, gin.H{
+							"error": "Unauthorized",
+						})
+						context.Abort()
+
+					}
+
+				}()
+				token := context.Request.Header.Get("Token")
+				fmt.Println(token)
+				dec := AesDecrypt(token, key)
+				fmt.Println(dec)
+				number, _ := strconv.ParseInt(dec, 10, 64)
+				if number > 1000 || number < 3000 {
+					context.Next()
+
+					return
+				} else {
+					context.JSON(http.StatusUnauthorized, gin.H{
+						"error": "Unauthorized",
+					})
+					context.Abort()
+				}
+
+			}
 			context.Next()
 			return
 
 		}
+
+		fmt.Println("url--------", urls)
+
 		context.JSON(http.StatusUnauthorized, gin.H{
 			"error": "Unauthorized",
 		})
