@@ -18,9 +18,12 @@ import "github.com/gin-gonic/gin"
 // @Router /hello/{name} [get]
 func InitRouter() *gin.Engine  {
 	var router=gin.Default()
+	router.Use(HeadersAuth())  //全局加入权限验证
 
 
 	router.GET("/messages",SelectAllMessage)
+	router.POST("/posttest",Posttest)
+	router.POST("/getToken",GetToken)
 	return router
 }
 

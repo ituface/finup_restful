@@ -1,4 +1,4 @@
-package main
+package controller
 
 import (
 	"fmt"
@@ -17,12 +17,7 @@ func httpGet(url string)(s string,err error){
 	body, err := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
 	body_s:=string(body)
-	a:=strings.Split(body_s, ",")
-	fmt.Println(a)
-	return a[2],err
+	a:=strings.Split(body_s, "\"")
+	return a[1],err
 }
-func main() {
 
-	body,_:=httpGet("http://10.10.180.206:8090/getEncrpyt?array=1821888,1212,1212")
-	fmt.Println(body)
-}
