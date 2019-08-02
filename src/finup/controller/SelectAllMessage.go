@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"regexp"
 	"strconv"
 )
 
@@ -66,12 +67,12 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 	if err != nil {
 		log.Fatalln("query is error", err)
 	}
-
 	for rows.Next() {
 		var message Message
 		rows.Scan(&message.AppCustomerId, &message.ProductName, &message.AppRequestId, &message.LendRequestId, &message.AppCustomerName, &message.AppMobile,
 			&message.AppIdNo, &message.AppLogin, &message.SalesNo, &message.AppStateType, &message.LendStatus, &message.LendCustomerId,
-			&message.LendCustomerName, &message.LendCustomerIdNo, message.LendMinStatus)
+			&message.LendCustomerName, &message.LendCustomerIdNo,&message.LendMinStatus)
+		fmt.Println("message-----",message)
         if message.AppMobile!=""{
         	message.AppMobile,_=httpGet(_address+_Decrpyt+message.AppMobile)
 		}
@@ -137,6 +138,7 @@ func HeadersAuth() gin.HandlerFunc {
 		//权限验证 通过headers
 
 		Auth := context.Request.Header.Get("Auth")
+		fmt.Println("adadada-----",Auth)
 		url := context.Request.URL
 
 		urls := fmt.Sprintf("%s", url)
@@ -189,3 +191,33 @@ func HeadersAuth() gin.HandlerFunc {
 	}
 
 }
+//跨域问题
+func Cors() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		method := c.Request.Method
+		origin := c.Request.Header.Get("Origin")
+		var filterHost = [...]string{"http://localhost.*","http://*.hfjy.com,","http://*"}
+		// filterHost 做过滤器，防止不合法的域名访问
+		var isAccess = false
+		for _, v := range(filterHost) {
+			match, _ := regexp.MatchString(v, origin)
+			if match {
+				isAccess = true
+			}
+		}
+		if isAccess {
+			// 核心处理方式
+			c.Header("Access-Control-Allow-Origin", "*")
+			c.Header("Access-Control-Allow-Headers", "*")
+			c.Header("Access-Control-Allow-Methods", "GET, OPTIONS, POST, PUT, DELETE")
+			c.Set("content-type", "application/json")
+		}
+		//放行所有OPTIONS方法
+		if method == "OPTIONS" {
+			c.JSON(http.StatusOK, "Options Request!")
+		}
+
+		c.Next()
+	}
+}
+
