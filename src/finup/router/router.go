@@ -15,6 +15,7 @@ func InitRouter() *gin.Engine  {
 	router.GET("/messages",SelectAllMessage)
 	router.POST("/posttest",Posttest)
 	router.POST("/getToken",GetToken)
+	router.POST("/updateManage",Upate_manage)
 	return router
 }
 

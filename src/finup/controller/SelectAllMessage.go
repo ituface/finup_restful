@@ -33,6 +33,9 @@ type Message struct {
 	LendMinStatus    string
 }
 
+
+
+
 func (m *Message) getAll(str string) (messages []Message, err error) {
 
 	sqlStr := `
