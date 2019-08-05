@@ -12,6 +12,7 @@ func main() {
 			fmt.Println("dsafafafd") // 这里的err其实就是panic传入的内容，55
 		}
 		fmt.Println("d")
+
 	}()
 	moblie := "4"
 	key := "787890096565454554541122"

@@ -12,14 +12,14 @@ import (
 )
 
 const key = "787890096565454554541122"
-const _address="http://10.10.180.206:8090"
-const  _Decrpyt = "/getDecrpyt?array="  //解密地址
+const _address = "http://10.10.180.206:8090"
+const _Decrpyt = "/getDecrpyt?array=" //解密地址
 
 type Message struct {
 	AppCustomerId    int
 	ProductName      string
 	AppRequestId     int
-	LendRequestId    int
+	LendRequestId    string
 	AppCustomerName  string
 	AppMobile        string
 	AppIdNo          string
@@ -40,13 +40,14 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 	lc.id AS app_customer_id ,
         alld.product_name,
 	lr.id AS app_request_id ,
-	fl.id AS lend_id ,
+	
 	lc.customer_name as app_customer_name,
 	lc.mobile AS app_moblie ,
 	lc.id_no AS app_id_no ,
 	lc.log_in_id,
 	lc.sales_no,	
 	lr.state_type ,	
+    fl.id AS lend_id ,
 	fl.status AS finup_lend_status ,
 	fl.lend_customer_id,
 	fc.name as lend_customer_name,
@@ -69,18 +70,18 @@ func (m *Message) getAll(str string) (messages []Message, err error) {
 	}
 	for rows.Next() {
 		var message Message
-		rows.Scan(&message.AppCustomerId, &message.ProductName, &message.AppRequestId, &message.LendRequestId, &message.AppCustomerName, &message.AppMobile,
-			&message.AppIdNo, &message.AppLogin, &message.SalesNo, &message.AppStateType, &message.LendStatus, &message.LendCustomerId,
-			&message.LendCustomerName, &message.LendCustomerIdNo,&message.LendMinStatus)
-		fmt.Println("message-----",message)
-        if message.AppMobile!=""{
-        	message.AppMobile,_=httpGet(_address+_Decrpyt+message.AppMobile)
+		rows.Scan(&message.AppCustomerId, &message.ProductName, &message.AppRequestId, &message.AppCustomerName, &message.AppMobile,
+			&message.AppIdNo, &message.AppLogin, &message.SalesNo, &message.AppStateType, &message.LendRequestId, &message.LendStatus, &message.LendCustomerId,
+			&message.LendCustomerName, &message.LendCustomerIdNo, &message.LendMinStatus)
+		fmt.Println("message-----", message)
+		if message.AppMobile != "" {
+			message.AppMobile, _ = httpGet(_address + _Decrpyt + message.AppMobile)
 		}
-		if message.AppIdNo!=""{
-			message.AppIdNo,_=httpGet(_address+_Decrpyt+message.AppIdNo)
+		if message.AppIdNo != "" {
+			message.AppIdNo, _ = httpGet(_address + _Decrpyt + message.AppIdNo)
 		}
-		if message.LendCustomerIdNo!=""{
-			message.LendCustomerIdNo,_=httpGet(_address+_Decrpyt+message.LendCustomerIdNo)
+		if message.LendCustomerIdNo != "" {
+			message.LendCustomerIdNo, _ = httpGet(_address + _Decrpyt + message.LendCustomerIdNo)
 		}
 		messages = append(messages, message)
 
@@ -138,7 +139,7 @@ func HeadersAuth() gin.HandlerFunc {
 		//权限验证 通过headers
 
 		Auth := context.Request.Header.Get("Auth")
-		fmt.Println("adadada-----",Auth)
+		fmt.Println("adadada-----", Auth)
 		url := context.Request.URL
 
 		urls := fmt.Sprintf("%s", url)
@@ -191,15 +192,16 @@ func HeadersAuth() gin.HandlerFunc {
 	}
 
 }
+
 //跨域问题
 func Cors() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		method := c.Request.Method
 		origin := c.Request.Header.Get("Origin")
-		var filterHost = [...]string{"http://localhost.*","http://*.hfjy.com,","http://*"}
+		var filterHost = [...]string{"http://localhost.*", "http://*.hfjy.com,", "http://*"}
 		// filterHost 做过滤器，防止不合法的域名访问
 		var isAccess = false
-		for _, v := range(filterHost) {
+		for _, v := range (filterHost) {
 			match, _ := regexp.MatchString(v, origin)
 			if match {
 				isAccess = true
@@ -220,4 +222,3 @@ func Cors() gin.HandlerFunc {
 		c.Next()
 	}
 }
-
